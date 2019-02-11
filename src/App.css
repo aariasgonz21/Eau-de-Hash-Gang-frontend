@@ -76,9 +76,15 @@
   overflow-y: scroll;
 }
 
+.extra.content{
+  margin-top: 0.5em;
+  background-color: #DBF6DB;
+}
+
 .cart-container{
   color: white;
   background-color: black;
+  height: 100%;
 }
 
 .second-title{

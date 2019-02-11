@@ -16,6 +16,12 @@ return (
         <div className="description">
           {props.perfume.catchphrase}
         </div>
+        <div class="extra content">
+          <p>
+            <i class="dollar icon"></i>
+            {props.perfume.price}.00
+          </p>
+        </div>
       </div>
       <div className="ui bottom attached button" onClick={() => {props.clickHandler ? props.clickHandler(props.perfume) : props.removeHandler(props.perfume)}}>
         <i className={props.clickHandler ? 'add icon' : 'remove icon'}></i>
