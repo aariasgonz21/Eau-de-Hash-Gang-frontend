@@ -5,8 +5,8 @@ const PerfumeCard = (props) => {
 return (
     <div className="five wide column">
       <div className="ui card">
-      <div className="image">
-        <img src={props.perfume.img} alt={props.perfume.name}/>
+      <div className="image perfume-image">
+        <img src={`/images/${props.perfume.img}`} alt={props.perfume.name}/>
       </div>
       <div className="content">
         <p className="header">{props.perfume.name}</p>
@@ -16,9 +16,9 @@ return (
         <div className="description">
           {props.perfume.catchphrase}
         </div>
-        <div class="extra content">
+        <div className="extra content">
           <p>
-            <i class="dollar icon"></i>
+            <i className="dollar icon"></i>
             {props.perfume.price}.00
           </p>
         </div>
