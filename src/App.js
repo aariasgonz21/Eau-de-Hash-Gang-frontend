@@ -10,13 +10,15 @@ state = {
   componentDidMount(){
     fetch('http://localhost:3001/api/v1/perfumes')
     .then(res => res.json())
-    .then(perfumes => console.log(perfumes))
-    }
+    .then(perfumes => this.setState({
+      perfumes: perfumes
+    }))
+  }
 
   render() {
     return (
       <div className="App">
-        <PerfumePage />
+        <PerfumePage perfumes={this.state.perfumes}/>
       </div>
     );
   }

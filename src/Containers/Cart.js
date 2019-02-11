@@ -4,7 +4,9 @@ class Cart extends Component {
 
   render() {
     return (
-      <div></div>
+      <div className="cart-container">
+        <h3 className="second-title"> cart </h3>
+      </div>
     );
   }
 
