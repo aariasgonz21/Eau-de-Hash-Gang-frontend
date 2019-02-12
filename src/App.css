@@ -97,7 +97,7 @@
   height: 100%;
 }
 
-.second-title{
+.second-title, .review-main-title{
   font-family: 'Love LetterTW', 'serif';
   padding-top: 1em;
   padding-bottom: 1em;
@@ -109,4 +109,27 @@
 }
 .five.wide.column {
   margin-left: 1.6em;
+}
+
+.review-container{
+  padding-bottom: 2em;
+  padding-top:2em;
+  background-color: #bababb;
+
+  margin: 1.5em;
+}
+
+.review-container > h3{
+  background-color: #E0FFFF;
+  font-family: 'Love LetterTW', 'Georgia';
+}
+
+.review-container > p{
+/* background-color: #bababb; */
+  color:black;
+  font-weight: 600;
+}
+
+.hidden{
+  display: none;
 }

@@ -6,7 +6,7 @@ class Cart extends Component {
   render() {
 
     let cartPerfume = this.props.cartPerfumes.map(perfume => {
-      return <PerfumeCard key={perfume.id} perfume={perfume} removeHandler={this.props.removeHandler}/>
+      return <PerfumeCard key={perfume.id} perfume={perfume} removeHandler={this.props.removeHandler} />
     })
 
     return (

@@ -1,15 +1,16 @@
 import React from 'react';
 import RenderReview from '../Components/RenderReview';
 
-const ReviewContainer = ({perfume}) => {
+const ReviewContainer = (props) => {
+  let { perfume } = props
     let mappedReviews = perfume.reviews.map(review => {
-      return <RenderReview key={review.id} review={review}/>
+      return <RenderReview key={review.id} review={review} updateHandler={props.updateHandler}/>
      }
     )
 
     return (
       <div>
-        <h1>Reviews</h1>
+        <h1 className="review-main-title">Reviews</h1>
         <div>{mappedReviews}</div>
       </div>
     )

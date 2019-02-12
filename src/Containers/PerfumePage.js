@@ -69,6 +69,10 @@ class PerfumePage extends Component {
 
     }
 
+    updateHandler = (review) => {
+      console.log(review)
+    }
+
   render() {
     console.log(this.state.perfumes)
     return (
@@ -80,7 +84,7 @@ class PerfumePage extends Component {
         </div>
         <div className='ui grid'>
           <div className="twelve wide column grid">
-            <PerfumeContainer submitHandler={this.submitHandler} clickHandler={this.clickHandler} perfumes={this.state.perfumes}/>
+            <PerfumeContainer submitHandler={this.submitHandler} clickHandler={this.clickHandler} updateHandler={this.updateHandler} perfumes={this.state.perfumes}/>
           </div>
           <div className="four wide column">
             <Cart cartPerfumes={this.state.cartPerfumes} removeHandler={this.removeHandler}/>

@@ -26,10 +26,12 @@ return (
           </p>
         </div>
       </div>
+
       <div className="ui bottom attached button" onClick={() => {props.clickHandler ? props.clickHandler(props.perfume) : props.removeHandler(props.perfume)}}>
         <i className={props.clickHandler ? 'add icon' : 'remove icon'}></i>
         {props.clickHandler ? 'Add to Cart' : 'Remove From Cart'}
       </div>
+
       <Popup trigger={
         <div className="ui bottom attached button" onClick>
         <i className='add icon'></i> Add Review </div>} modal
@@ -41,8 +43,9 @@ return (
       <div className="ui bottom attached button">
         <i className='star icon'></i> View Reviews </div>} modal
       position="right center">
-        <div>{<ReviewContainer perfume={props.perfume} />}</div>
+        <div>{<ReviewContainer perfume={props.perfume} updateHandler={props.updateHandler}/>}</div>
       </Popup>
+      
     </div>
   </div>
   )
