@@ -20,7 +20,7 @@ class PerfumeContainer extends Component {
     })
 
     return filteredPerfumes.map(perfume => {
-        return <PerfumeCard key={perfume.id} perfume={perfume} clickHandler={this.props.clickHandler}/>
+        return <PerfumeCard key={perfume.id} perfume={perfume} clickHandler={this.props.clickHandler} submitHandler={this.props.submitHandler}/>
     })
   }
 
@@ -28,7 +28,7 @@ class PerfumeContainer extends Component {
 
     return (
       <div className="perfume-container">
-      
+
         <form className="ui input" onSubmit={this.submitHandler}>
           <input onChange={this.inputHandler} type="text" placeholder="Search"/>
         </form>

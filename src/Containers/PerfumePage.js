@@ -39,7 +39,38 @@ class PerfumePage extends Component {
       })
     }
 
+    submitHandler = (e, submission) => {
+      e.preventDefault();
+      let data = {
+        name: submission.name,
+        rating: submission.rating,
+        review_text: submission.review,
+        perfume_id: submission.perfumeId
+      }
+      let options = {
+        method: 'POST',
+        headers: {
+          'Content-Type':'application/json'
+        },
+        body: JSON.stringify(data)
+      }
+      fetch(`http://localhost:3001/api/v1/perfumes/${submission.perfumeId}/reviews`, options)
+      .then(res => res.json())
+      .then(data =>
+        {
+          let perfs = [...this.state.perfumes]
+          let foundPerf = perfs.find(perf => perf.id === submission.perfumeId)
+          let reviews = [...foundPerf.reviews, data]
+          foundPerf.reviews = reviews
+          this.setState({
+            perfumes: perfs
+          })
+        })
+
+    }
+
   render() {
+    console.log(this.state.perfumes)
     return (
       <div>
         <div className="landing-page">
@@ -49,7 +80,7 @@ class PerfumePage extends Component {
         </div>
         <div className='ui grid'>
           <div className="twelve wide column grid">
-            <PerfumeContainer clickHandler={this.clickHandler} perfumes={this.state.perfumes}/>
+            <PerfumeContainer submitHandler={this.submitHandler} clickHandler={this.clickHandler} perfumes={this.state.perfumes}/>
           </div>
           <div className="four wide column">
             <Cart cartPerfumes={this.state.cartPerfumes} removeHandler={this.removeHandler}/>

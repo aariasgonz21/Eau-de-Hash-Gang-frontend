@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Popup from "reactjs-popup";
 import ReviewForm from "./ReviewForm"
+import ReviewContainer from '../Containers/ReviewContainer'
 
 const PerfumeCard = (props) => {
 
@@ -33,12 +34,15 @@ return (
         <div className="ui bottom attached button" onClick>
         <i className='add icon'></i> Add Review </div>} modal
         position="right center">
-          <div>{<ReviewForm />}</div>
+          <div>{<ReviewForm perfume={props.perfume} submitHandler={props.submitHandler}/>}</div>
       </Popup>
+
+      <Popup trigger={
       <div className="ui bottom attached button">
-        <i className='star icon'></i>
-        View Reviews
-      </div>
+        <i className='star icon'></i> View Reviews </div>} modal
+      position="right center">
+        <div>{<ReviewContainer perfume={props.perfume} />}</div>
+      </Popup>
     </div>
   </div>
   )

@@ -5,7 +5,8 @@ class ReviewForm extends Component {
   state={
     name: '',
     rating: 0,
-    review: ''
+    review: '',
+    perfumeId: this.props.perfume.id
   }
 
   changeHandler = (e) => {
@@ -23,11 +24,10 @@ class ReviewForm extends Component {
     <div className="item" data-value="4">4</div>
     <div className="item" data-value="5">5</div>
     </div>*/}
-    console.log(this.state)
     return (
       <div>
         <h1>Add a Review</h1>
-        <form onSubmit={(e) => {console.log('yeet'); e.preventDefault();}} className="ui form">
+        <form onSubmit={(e) => this.props.submitHandler(e, this.state)} className="ui form">
 
           <div className="field">
             <label className="form-labels">Name</label>
@@ -36,7 +36,7 @@ class ReviewForm extends Component {
 
           <div className="field">
             <label className="form-labels">Rating</label>
-            <select name="rating" className="ui fluid dropdown">
+            <select name="rating" className="ui fluid dropdown" onChange={this.changeHandler}>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -47,7 +47,7 @@ class ReviewForm extends Component {
 
           <div className="field">
             <label className="form-labels">Review</label>
-            <textarea rows="4" cols="50" placeholder="Review" name="review"/>
+            <textarea rows="4" cols="50" placeholder="Review" name="review" onChange={this.changeHandler}/>
           </div>
 
           <button className="ui button" type="submit">Submit</button>
