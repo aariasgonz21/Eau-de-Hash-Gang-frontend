@@ -43,9 +43,9 @@ return (
       <div className="ui bottom attached button">
         <i className='star icon'></i> View Reviews </div>} modal
       position="right center">
-        <div>{<ReviewContainer perfume={props.perfume} updateHandler={props.updateHandler}/>}</div>
+        <div>{<ReviewContainer perfume={props.perfume} editSubmitHandler={props.editSubmitHandler}/>}</div>
       </Popup>
-      
+
     </div>
   </div>
   )

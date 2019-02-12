@@ -24,7 +24,7 @@ class RenderReview extends Component {
         <button className="ui teal button" onClick={this.editClick}>Edit Review</button>
         <button className="negative ui button">Delete Review</button>
         <div className={!this.state.clicked ? "hidden" : ""}>
-          <EditReviewForm />
+          <EditReviewForm perfume={this.props.perfume} editSubmitHandler={this.props.editSubmitHandler} review={this.props.review}/>
         </div>
       </div>
     )

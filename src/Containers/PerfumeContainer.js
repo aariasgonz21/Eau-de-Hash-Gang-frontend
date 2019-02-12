@@ -20,7 +20,7 @@ class PerfumeContainer extends Component {
     })
 
     return filteredPerfumes.map(perfume => {
-        return <PerfumeCard key={perfume.id} perfume={perfume} clickHandler={this.props.clickHandler} submitHandler={this.props.submitHandler} updateHandler={this.props.updateHandler}/>
+        return <PerfumeCard key={perfume.id} perfume={perfume} clickHandler={this.props.clickHandler} submitHandler={this.props.submitHandler} editSubmitHandler={this.props.editSubmitHandler}/>
     })
   }
 

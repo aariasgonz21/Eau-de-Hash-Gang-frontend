@@ -133,3 +133,7 @@
 .hidden{
   display: none;
 }
+
+.review-edit-form {
+    background-color: #E0FFFF;
+}

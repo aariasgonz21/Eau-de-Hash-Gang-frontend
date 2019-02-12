@@ -4,7 +4,7 @@ import RenderReview from '../Components/RenderReview';
 const ReviewContainer = (props) => {
   let { perfume } = props
     let mappedReviews = perfume.reviews.map(review => {
-      return <RenderReview key={review.id} review={review} updateHandler={props.updateHandler}/>
+      return <RenderReview key={review.id} review={review} perfume={props.perfume} editSubmitHandler={props.editSubmitHandler}/>
      }
     )
 
