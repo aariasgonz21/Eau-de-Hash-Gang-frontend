@@ -61,7 +61,6 @@
 
 .frame {
   width: 20%;
-  /* height: 25%; */
   position: relative;
   z-index: -1;
   margin-top: -3.3%;
@@ -77,10 +76,14 @@
   overflow-y: scroll;
 }
 
+.main-cart{
+  height:570px;
+  overflow-y: scroll;
+}
+
 .image.perfume-image{
   width: 70%;
   margin:auto;
-  /* width: 70%; */
 }
 
 .extra.content{
@@ -100,6 +103,10 @@
   padding-bottom: 1em;
 }
 
+.perfume-name{
+  font-family: 'Love LetterTW', 'Georgia';
+  font-size: 18px;
+}
 .five.wide.column {
   margin-left: 1.6em;
 }

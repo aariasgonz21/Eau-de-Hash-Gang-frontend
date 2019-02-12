@@ -12,7 +12,7 @@ class Cart extends Component {
     return (
       <div className="cart-container">
         <h3 className="second-title">∙ Cart ∙</h3>
-        <div>{cartPerfume}</div>
+        <div className="main-cart">{cartPerfume}</div>
       </div>
     );
   }

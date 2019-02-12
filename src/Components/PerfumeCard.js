@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Popup from "reactjs-popup";
+import ReviewForm from "./ReviewForm"
 
 const PerfumeCard = (props) => {
 
@@ -9,7 +11,7 @@ return (
         <img src={`/images/${props.perfume.img}`} alt={props.perfume.name}/>
       </div>
       <div className="content">
-        <p className="header">{props.perfume.name}</p>
+        <p className="perfume-name"> Eau de {props.perfume.name}</p>
         <div className="meta">
           <span className="date">{props.perfume.scent}</span>
         </div>
@@ -26,6 +28,16 @@ return (
       <div className="ui bottom attached button" onClick={() => {props.clickHandler ? props.clickHandler(props.perfume) : props.removeHandler(props.perfume)}}>
         <i className={props.clickHandler ? 'add icon' : 'remove icon'}></i>
         {props.clickHandler ? 'Add to Cart' : 'Remove From Cart'}
+      </div>
+      <Popup trigger={
+        <div className="ui bottom attached button" onClick>
+        <i className='add icon'></i> Add Review </div>} modal
+        position="right center">
+          <div>{<ReviewForm />}</div>
+      </Popup>
+      <div className="ui bottom attached button">
+        <i className='star icon'></i>
+        View Reviews
       </div>
     </div>
   </div>
