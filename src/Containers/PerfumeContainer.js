@@ -29,8 +29,8 @@ class PerfumeContainer extends Component {
     return (
       <div className="perfume-container">
 
-        <form className="ui input" onSubmit={this.submitHandler}>
-          <input onChange={this.inputHandler} type="text" placeholder="Search"/>
+        <form className="ui input">
+          <input onChange={this.inputHandler} value={this.state.serachTerm} type="text" placeholder="Search"/>
         </form>
 
         <h1 className="second-title">  ∙ Perfumes ∙ </h1>

@@ -6,9 +6,10 @@ class EditReviewForm extends Component {
     name: this.props.review.name,
     rating: this.props.review.rating,
     reviewText: this.props.review.review_text,
-    perfumeId: this.props.perfume.id
+    perfumeId: this.props.perfume.id,
+    reviewId: this.props.review.id
   }
-
+  
   changeHandler = (e) => {
     this.setState({
       [e.target.name]: e.target.value

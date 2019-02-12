@@ -71,7 +71,43 @@ class PerfumePage extends Component {
 
     editSubmitHandler = (e, editReview) => {
       e.preventDefault();
-      console.log(editReview)
+      let data = {
+        name: editReview.name,
+        rating: editReview.rating,
+        review_text: editReview.reviewText,
+        perfume_id: editReview.perfumeId
+      }
+      let options = {
+        method: 'PATCH',
+        headers: {
+          'Content-Type':'application/json'
+        },
+        body: JSON.stringify(data)
+      }
+      fetch(`http://localhost:3001/api/v1/perfumes/${editReview.perfumeId}/reviews/${editReview.reviewId}`, options)
+      .then(res => res.json())
+      .then(data =>
+        {
+          let perfs = this.state.perfumes.map(perfume => {
+            //console.log(this.state.perfumes)
+            if(perfume.id === editReview.perfumeId){
+              const newReviews = perfume.reviews.map(review => {
+                if(review.id === editReview.reviewId){
+                  return data
+                } else {
+                  return review
+                }
+              })
+              return {...perfume, reviews: newReviews}
+            }
+            else{
+              return perfume
+            }
+          })
+          this.setState({
+            perfumes: perfs
+          })
+         })
     }
 
   render() {
