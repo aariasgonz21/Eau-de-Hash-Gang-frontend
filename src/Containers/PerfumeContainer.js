@@ -30,7 +30,7 @@ class PerfumeContainer extends Component {
       <div className="perfume-container">
 
         <form className="ui input">
-          <input onChange={this.inputHandler} value={this.state.serachTerm} type="text" placeholder="Search"/>
+          <input onChange={this.inputHandler} value={this.state.searchTerm} type="text" placeholder="Search"/>
         </form>
 
         <h1 className="second-title">  ∙ Perfumes ∙ </h1>
