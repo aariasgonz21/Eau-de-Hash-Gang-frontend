@@ -9,9 +9,9 @@ const ReviewContainer = (props) => {
     )
 
     return (
-      <div>
+      <div className="review-popup">
         <h1 className="review-main-title">Reviews</h1>
-        <div>{mappedReviews}</div>
+        <div className="review-list">{mappedReviews}</div>
       </div>
     )
 }

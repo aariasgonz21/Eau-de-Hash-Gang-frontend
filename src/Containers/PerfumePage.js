@@ -116,7 +116,7 @@ class PerfumePage extends Component {
       <div>
         <div className="landing-page">
           <h1 className="main-title">Eau De</h1>
-          <h1>{}</h1>
+          <img className="frame" src="./YeroldsFrame.svg" alt="hashgang"/>
           <h1 id="yerold">Hash Gang</h1>
         </div>
         <div className='ui grid'>

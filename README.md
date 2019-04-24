@@ -1,8 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Eau De Hash Gang (Front End)
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+A mock e-commerce web application based on Flatiron School Cohort (Named 'Hash Gang') where the students are now scents!
 
 ### `npm start`
 

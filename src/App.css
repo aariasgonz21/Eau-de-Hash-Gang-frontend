@@ -49,13 +49,13 @@
 .main-title{
   font-family: 'Love LetterTW', 'serif';
   font-size: 6em;
-  margin-right: 5em;
+  margin-right: 7em;
 }
 
 #yerold{
   font-family: 'Love LetterTW', 'serif';
   font-size: 6em;
-  margin-left: 5em;
+  margin-left: 7.5em;
   margin-top: -0.8em;
 }
 
@@ -115,7 +115,6 @@
   padding-bottom: 2em;
   padding-top:2em;
   background-color: #bababb;
-
   margin: 1.5em;
 }
 
